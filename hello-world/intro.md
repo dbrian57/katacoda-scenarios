@@ -1,1 +1,1 @@
-Welcome to your first Katacoda Scenario!
+Terraform is a powerful open-source tool that allows you to build, version, and automate the deployment of cloud infrastructure. You can use Terraform to set up simple or complex architectures for your web applications in your DigitalOcean account with a few commands on the command line. This gives you the benefit of increased efficiency when setting up and scaling your web application's infrastructure.
