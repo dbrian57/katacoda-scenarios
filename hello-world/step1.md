@@ -18,57 +18,35 @@ Next, you need to own a domain name and [have its DNS records hosted by DigitalO
 
 Lastly, you need to install Terraform on the machine you are deploying from. Terraform is available for MacOS, Windows, Linux, and FreeBSD.
 
-To install Terraform on Windows using Chocolatey:
+To install Terraform on Ubuntu:
 
-`choco install terraform`{{execute}}
+`sudo apt-get update`{{execute}}
 
-Once the files have been extracted, verify Terraform's installation:
-
-`terraform –v`{{execute}}
-
-
-If installed correctly, the system should return Terraform's version information:
-```shell
-Terraform v.0.12.2
-```
-{{% /tab %}}
-
-{{% tab name="CentOS" %}}
-To install Terraform on CentOS, start by updating the repository lists:
-
-```shell
-sudo yum update
-```
 You will need the `wget` and `unzip` utilities to download and extract the terraform files. If your system does not have the `wget` and `unzip`, use the following command to install them:
 
-```shell
-sudo yum install wget unzip
-```
+`sudo apt-get install wget unzip`{{execute}}
 
 To download the Terraform files using `wget`:
 
-```shell
-sudo wget https://releases.hashicorp.com/terraform/0.12.2/terraform_0.12.2_linux_amd64.zip
-```
+`sudo wget https://releases.hashicorp.com/terraform/0.12.2/terraform_0.12.2_linux_amd64.zip`
 
 Then extract the downloaded files using `unzip`. This will effectively install Terraform on your system:
 
-```shell
-sudo unzip ./terraform_0.12.2_linux_amd64.zip –d /usr/local/bin
-```
+`sudo unzip ./terraform_0.12.2_linux_amd64.zip`{{execute}}
+
+Then set the path:
+
+`sudo mv terraform /usr/local/bin/`{{execute}}
 
 Once the files have been extracted, verify Terraform's installation:
 
-```shell
-terraform –v
-```
+`terraform version`{{execute}}
 
 If installed correctly, the system should return Terraform's version information:
+
 ```shell
 Terraform v.0.12.2
 ```
-{{% /tab %}}
-{{< /tabs >}}
 
 ## Step 1: Download the DigitalOcean Sample Terraform GitHub Repo
 We have set up a GitHub repository with several sample web application architectures that you can deploy into your account using Terraform. You can adjust the configuration files later on to suit your infrastructure's needs.
@@ -76,9 +54,8 @@ We have set up a GitHub repository with several sample web application architect
 ### How do I do this?
 To download the repository to your system:
 
-```Shell
-git clone https://github.com/do-community/terraform-sample-digitalocean-architectures
-```
+`git clone https://github.com/do-community/terraform-sample-digitalocean-architectures`{{execute}}
+
 This becomes the directory you will run the Terraform commands from in the command line.
 
 ## Step 2: Configure Terraform Environment Variables
@@ -97,6 +74,8 @@ We have provided a sample `.tfvars` file in the directory that contains variable
 
 ### How do I do this?
 1. Open the `⁨terraform-sample-digitalocean-architectures⁩\01-minimal-web-db-stack\⁩nyc3.tfvars` file in a text editor.
+
+`vim terraform-sample-digitalocean-architectures⁩\01-minimal-web-db-stack\⁩nyc3.tfvars`{{execute}}
 
 2. Edit the values of each field, replacing the `CHANGE_ME` values with your own.
 
