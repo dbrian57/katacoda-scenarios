@@ -23,9 +23,7 @@ Lastly, you need to install Terraform on the machine you are deploying from. Ter
 {{% tab name="MacOS" %}}
 To install Terraform on MacOS using Homebrew:
 
-```shell
-brew install terraform
-```{{execute}}
+`brew install terraform`{{execute}}
 
 {{% /tab %}}
 
