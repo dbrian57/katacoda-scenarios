@@ -25,7 +25,8 @@ To install Terraform on MacOS using Homebrew:
 
 ```shell
 brew install terraform
-```
+```{{execute}}
+
 {{% /tab %}}
 
 {{% tab name="Windows" %}}
