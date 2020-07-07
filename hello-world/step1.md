@@ -18,52 +18,14 @@ Next, you need to own a domain name and [have its DNS records hosted by DigitalO
 
 Lastly, you need to install Terraform on the machine you are deploying from. Terraform is available for MacOS, Windows, Linux, and FreeBSD.
 
-{{< tabs anchor="install" >}}
-
-{{% tab name="MacOS" %}}
-To install Terraform on MacOS using Homebrew:
-
-`brew install terraform`{{execute}}
-
-{{% /tab %}}
-
-{{% tab name="Windows" %}}
-
 To install Terraform on Windows using Chocolatey:
 
-```shell
-choco install terraform
-```
-{{% /tab %}}
-
-{{% tab name="Ubuntu" %}}
-To install Terraform on Ubuntu:
-
-```shell
-sudo apt-get update
-```
-You will need the `wget` and `unzip` utilities to download and extract the terraform files. If your system does not have the `wget` and `unzip`, use the following command to install them:
-
-```shell
-sudo apt-get install wget unzip
-```
-
-To download the Terraform files using `wget`:
-
-```shell
-sudo wget https://releases.hashicorp.com/terraform/0.12.2/terraform_0.12.2_linux_amd64.zip
-```
-
-Then extract the downloaded files using `unzip`. This will effectively install Terraform on your system:
-```
-sudo unzip ./terraform_0.12.2_linux_amd64.zip –d /usr/local/bin
-```
+`choco install terraform`{{execute}}
 
 Once the files have been extracted, verify Terraform's installation:
 
-```Shell
-terraform –v
-```
+`terraform –v`{{execute}}
+
 
 If installed correctly, the system should return Terraform's version information:
 ```shell
