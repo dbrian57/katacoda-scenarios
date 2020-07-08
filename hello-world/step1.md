@@ -28,7 +28,7 @@ You will need the `wget` and `unzip` utilities to download and extract the terra
 
 To download the Terraform files using `wget`:
 
-`sudo wget https://releases.hashicorp.com/terraform/0.12.2/terraform_0.12.2_linux_amd64.zip`
+`sudo wget https://releases.hashicorp.com/terraform/0.12.2/terraform_0.12.2_linux_amd64.zip`{{execute}}
 
 Then extract the downloaded files using `unzip`. This will effectively install Terraform on your system:
 
@@ -129,16 +129,16 @@ Initialization prepares the working directory for use by accounting for any chan
 ### How do I do this?
 
 1. From inside the `01-minimal-web-db-stack` directory, to initialize the directory:
-`terraform init`
+`terraform init`{{execute}}
 
 2. To review your Terraform plan:
 
-`terraform plan -var-file=⁩nyc3.tfvars -out=infra.out`
+`terraform plan -var-file=⁩nyc3.tfvars -out=infra.out`{{execute}}
 
 Terraform compiles and displays the plan on the terminal and also saves the plan to an `infra.out` file inside of the working directory. Open the file in a text editor to review your Terraform plan.
 
 3. If satisfied with the plan, run:
- `terraform apply "infra.out"`
+ `terraform apply "infra.out"`{{execute}}
 
 Terraform will create the resources outlined in the Terraform plan into your DigitalOcean account.
 
