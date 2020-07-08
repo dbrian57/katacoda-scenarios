@@ -73,9 +73,15 @@ We have provided a sample `.tfvars` file in the directory that contains variable
 * `domain_name` - The domain the Droplets will become accessible from.
 
 ### How do I do this?
-1. Open the `⁨terraform-sample-digitalocean-architectures⁩\01-minimal-web-db-stack\⁩nyc3.tfvars` file in a text editor.
+1. Change to the working directory:
 
-`vim terraform-sample-digitalocean-architectures⁩\01-minimal-web-db-stack\⁩nyc3.tfvars`{{execute}}
+`cd terraform-sample-digitalocean-architectures`{{execute}}
+
+`cd 01-minimal-web-db-stack`{{execute}}
+
+Open the `⁨terraform-sample-digitalocean-architectures⁩\01-minimal-web-db-stack\⁩nyc3.tfvars` file in a text editor.
+
+`vim nyc3.tfvars`{{execute}}
 
 2. Edit the values of each field, replacing the `CHANGE_ME` values with your own.
 
