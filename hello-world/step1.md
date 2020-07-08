@@ -128,9 +128,17 @@ Initialization prepares the working directory for use by accounting for any chan
 
 ### How do I do this?
 
-1. From inside the `01-minimal-web-db-stack` directory, run `terraform init` to initialize it.
-2. To review your Terraform plan, run `terraform plan -var-file=YOUR_VARS.tfvars -out=infra.out`, replacing the `YOUR_VARS.tfvars` with your `.tfvars` file. Terraform saves the plan to an `infra.out` inside the working directory. Open the file in a text editor to review your Terraform plan.
-3. If satisfied with the plan, run `terraform apply "infra.out"`.
+1. From inside the `01-minimal-web-db-stack` directory, to initialize the directory:
+`terraform init`
+
+2. To review your Terraform plan:
+
+`terraform plan -var-file=⁩nyc3.tfvars -out=infra.out`
+
+Terraform compiles and displays the plan on the terminal and also saves the plan to an `infra.out` file inside of the working directory. Open the file in a text editor to review your Terraform plan.
+
+3. If satisfied with the plan, run:
+ `terraform apply "infra.out"`
 
 Terraform will create the resources outlined in the Terraform plan into your DigitalOcean account.
 
