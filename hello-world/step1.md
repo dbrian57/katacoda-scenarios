@@ -1,11 +1,3 @@
-This is your first step.
-
-## Task
-
-This is Dan's _example_ of creating a scenario and running a **command**
-
-`echo 'Hello World'`{{execute}}
-
 We have provided [several sample architectures in GitHub](https://github.com/do-community/terraform-sample-digitalocean-architectures/tree/master/01-minimal-web-db-stack) that you can deploy using Terraform. This tutorial will guide you through how to deploy one of these architectures into a VPC network on your DigitalOcean account that includes three Droplets attached to database and a load balancer. The Droplets will be immediately accessible via the web.
 
 {{< image "/vpc/resources/vpc-terraform-architecture.png" "The sample web application architecture." >}}
@@ -81,7 +73,7 @@ We have provided a sample `.tfvars` file in the directory that contains variable
 
 Open the `⁨terraform-sample-digitalocean-architectures⁩\01-minimal-web-db-stack\⁩nyc3.tfvars` file in a text editor.
 
-`vim nyc3.tfvars`{{execute}}
+`nano nyc3.tfvars`{{execute}}
 
 2. Edit the values of each field, replacing the `CHANGE_ME` values with your own.
 
@@ -147,6 +139,13 @@ Terraform compiles and displays the plan on the terminal and also saves the plan
  `terraform apply "infra.out"`{{execute}}
 
 Terraform will create the resources outlined in the Terraform plan into your DigitalOcean account.
+
+##Destroy Resources
+
+### How do I do this?
+To destroy the resources you just created:
+
+`terraform destroy -var-file=⁩nyc3.tfvars`{{execute}}
 
 ## Summary {#tldr}
 Once you've deployed resources into your account, you can use this same workflow to deploy similar architectures for other web applications into your account. You only need to complete these steps once:
